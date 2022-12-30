@@ -40,6 +40,9 @@ dependencies:
   #blocs
   flutter_bloc: ^8.1.1
   bloc: ^8.1.0
+  #splash Screen
+  flutter_native_splash: ^2.2.16
+
 
 
 dev_dependencies:
@@ -57,8 +60,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
