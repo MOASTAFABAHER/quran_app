@@ -42,6 +42,17 @@ dependencies:
   bloc: ^8.1.0
   #splash Screen
   flutter_native_splash: ^2.2.16
+  #Animated bottom nav
+  animated_bottom_navigation_bar: ^1.1.0+1
+  circular_reveal_animation: ^2.0.1
+  auto_size_text: ^3.0.0
+  #svg
+  flutter_svg: ^1.1.6
+
+
+  
+
+
 
 
 
@@ -62,6 +73,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/icon/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
