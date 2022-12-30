@@ -48,6 +48,7 @@ dependencies:
   auto_size_text: ^3.0.0
   #svg
   flutter_svg: ^1.1.6
+  flutter_qiblah: ^2.1.0
 
 
   

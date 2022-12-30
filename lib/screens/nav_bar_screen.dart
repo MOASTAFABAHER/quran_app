@@ -9,7 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/parser.dart';
 import 'package:quran_app/screens/azkar_screen.dart';
 import 'package:quran_app/screens/home_screen.dart';
-import 'package:quran_app/screens/kbla_screen.dart';
+import 'package:quran_app/screens/qibla_screen.dart';
 import 'package:quran_app/screens/quran_screen.dart';
 import 'package:quran_app/src/app_color.dart';
 
@@ -52,7 +52,12 @@ class _NavBarScreenState extends State<NavBarScreen>
     ),
   ];
 
-  final screens = [HomeScreen(), AzkarScreen(), QuranScreen(), KblaScreen()];
+  final screens = [
+    HomeScreen(),
+    AzkarScreen(),
+    QiblaScreen(),
+    QuranScreen(),
+  ];
   final listOfString = ['Home', 'doa', 'Kbla', 'quran'];
 
   @override
@@ -123,7 +128,7 @@ class _NavBarScreenState extends State<NavBarScreen>
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData.dark(),
+      data: ThemeData.light(),
       child: Scaffold(
         extendBody: true,
         body: NotificationListener<ScrollNotification>(
