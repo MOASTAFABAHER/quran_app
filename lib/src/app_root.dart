@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran_app/screens/home_screen.dart';
+import 'package:quran_app/screens/splash_screen.dart';
 
 class AppRoot extends StatelessWidget {
   const AppRoot({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class AppRoot extends StatelessWidget {
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
 
-          home: HomeScreen(),
+          home: SplashScreen(),
         );
       },
     );
