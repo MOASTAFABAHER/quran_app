@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran_app/screens/home_screen.dart';
+import 'package:quran_app/screens/nav_bar_screen.dart';
 import 'package:quran_app/src/app_color.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,9 +16,14 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomeScreen())));
+      Duration(seconds: 5),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NavBarScreen(title: 'Quran'),
+        ),
+      ),
+    );
   }
 
   @override
