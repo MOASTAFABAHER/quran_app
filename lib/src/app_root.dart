@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran_app/screens/home_screen.dart';
 import 'package:quran_app/screens/qibla_screen.dart';
+import 'package:quran_app/screens/quran_screen.dart';
+import 'package:quran_app/screens/select_sora_screen.dart';
 import 'package:quran_app/screens/splash_screen.dart';
 import 'package:quran_app/screens/test.dart';
 

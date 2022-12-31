@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => NavBarScreen(title: 'Quran'),
+          builder: (context) => NavBarScreen(),
         ),
       ),
     );

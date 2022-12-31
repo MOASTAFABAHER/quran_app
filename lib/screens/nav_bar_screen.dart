@@ -14,10 +14,6 @@ import 'package:quran_app/screens/quran_screen.dart';
 import 'package:quran_app/src/app_color.dart';
 
 class NavBarScreen extends StatefulWidget {
-  NavBarScreen({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
   @override
   _NavBarScreenState createState() => _NavBarScreenState();
 }
@@ -137,7 +133,7 @@ class _NavBarScreenState extends State<NavBarScreen>
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: AppColors.kDeepOrangeColor,
-          child: SvgPicture.asset('assets/images/icon/quran.svg'),
+          child: iconList[_bottomNavIndex],
           onPressed: () {
             _fabAnimationController.reset();
             _borderRadiusAnimationController.reset();

@@ -49,6 +49,9 @@ dependencies:
   #svg
   flutter_svg: ^1.1.6
   flutter_qiblah: ^2.1.0
+  #web view
+  webview_flutter: ^4.0.1
+
 
 
   

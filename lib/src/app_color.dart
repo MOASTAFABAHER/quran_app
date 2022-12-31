@@ -7,5 +7,6 @@ class AppColors {
   static Color kDeepOrangeColor = Color(0xfff04429);
   static Color kBlackColor = Colors.black;
   static Color kWhiteColor = Colors.white;
-  static Color kGreyColor = Colors.grey[500]!;
+  static Color kGreyColor = Colors.grey[300]!;
+  static Color kBrownColor = Colors.brown[100]!;
 }
