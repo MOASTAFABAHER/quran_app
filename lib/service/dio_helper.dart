@@ -1,21 +1,36 @@
 import 'package:dio/dio.dart';
 
 class DioHelper {
+
   static Dio? dio;
 
-  static init() {
-    dio = Dio(BaseOptions(
-      baseUrl: 'https://medicalapp.eraasoft.com/api/',
-      receiveDataWhenStatusError: true,
-    ));
+  static init(){
+    dio=Dio(
+        BaseOptions(
+          baseUrl: 'http://api.aladhan.com/v1/',
+          receiveDataWhenStatusError: true,
+        )
+    );
   }
 
-  static Future<Response> getData({
+ static Future<Response> getData({
     required String url,
     Map<String, dynamic>? query,
+    
   }) async {
+    dio!.options.headers = {
+      'Content-Type': 'application/json',
+      
+
+
+    };
     return await dio!.get(url, queryParameters: query);
   }
+
+
+
+
+
 
   static Future<Response> postData({
     required String url,
@@ -23,24 +38,31 @@ class DioHelper {
     required Map<String, dynamic> data,
     String? token,
   }) {
-    dio!.options.headers = {
-      'content-type': 'application/json',
+    dio?.options.headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'bearer $token',
     };
     return dio!.post(url, queryParameters: query, data: data);
   }
 
-  static Future<Response> putData({
-    required String url,
-    Map<String, dynamic>? query,
-    required Map<String, dynamic> data,
-    String? token,
-  }) {
-    dio!.options.headers = {
-      'Content-Type': 'application/json',
-      'authorization': 'Bearer $token',
-    };
-    return dio!.post(url, queryParameters: query, data: data);
-  }
+
+
+
+
+
+    static Future<Response> putData({
+      required String url,
+      Map<String, dynamic>? query,
+      required Map<String, dynamic> data,
+      String? token,
+    }) {
+      dio!.options.headers = {
+        'Content-Type': 'application/json',
+        'authorization': 'Bearer $token',
+      };
+      return dio!.post(url, queryParameters: query, data: data);
+    }
+
 
   static Future<Response> deleteData(
       {required String url, String? token}) async {
@@ -50,4 +72,5 @@ class DioHelper {
     };
     return await dio!.delete(url);
   }
-}
+
+  }
