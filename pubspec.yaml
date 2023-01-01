@@ -51,6 +51,22 @@ dependencies:
   flutter_qiblah: ^2.1.0
   #web view
   webview_flutter: ^4.0.1
+  audioplayers: ^0.20.1
+  date_format: ^2.0.7
+  intl: ^0.18.0
+  #luncher icon
+  flutter_launcher_icons: ^0.11.0
+
+
+
+flutter_icons:
+
+  image_path: "assets/quran_icon_luncher.jpg"
+  android: "launcher_icon"
+  ios: true
+
+
+
 
 
 
@@ -78,6 +94,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/icon/
+    - assets/sound/PraySound.mpeg.mp3
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
