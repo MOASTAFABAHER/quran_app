@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quran_app/screens/home_screen.dart';
-import 'package:quran_app/screens/qibla_screen.dart';
-import 'package:quran_app/screens/quran_screen.dart';
-import 'package:quran_app/screens/select_sora_screen.dart';
+import 'package:quran_app/bloc/get_data/cubit/get_data_cubit.dart';
+
 import 'package:quran_app/screens/splash_screen.dart';
-import 'package:quran_app/screens/test.dart';
 
 class AppRoot extends StatelessWidget {
   const AppRoot({Key? key}) : super(key: key);
@@ -17,16 +15,16 @@ class AppRoot extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'First Method',
-          // You can use the library anywhere in the app even in theme
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-            textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => GetDataCubit(),
+            ),
+          ],
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: SplashScreen(),
           ),
-          // home: TestWidget()
-          home: SplashScreen(),
         );
       },
     );

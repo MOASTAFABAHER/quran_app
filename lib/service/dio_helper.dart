@@ -5,7 +5,7 @@ class DioHelper {
 
   static init() {
     dio = Dio(BaseOptions(
-      baseUrl: 'https://medicalapp.eraasoft.com/api/',
+      baseUrl: 'http://api.aladhan.com/v1/',
       receiveDataWhenStatusError: true,
     ));
   }
